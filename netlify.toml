@@ -1,0 +1,10 @@
+[build]
+  base = "labsx"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18.20.3"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
