@@ -17,7 +17,7 @@ module.exports = {
         light: "#F9FAFB",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "sans-serif"],
       },
       borderRadius: {
         xl: "1rem",

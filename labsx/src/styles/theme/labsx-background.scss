@@ -1,0 +1,53 @@
+html:has(.main-content-1) {
+  --primary: #4f46e5;
+  --primary-shade: #00c9a7;
+  --background: #0e0e12;
+
+  color: white;
+  background-color: var(--background);
+  background-image: conic-gradient(
+    from var(--angle),
+    rgba(79, 70, 229, 0.6),
+    rgba(79, 70, 229, 0.3),
+    rgba(0, 201, 167, 0.5),
+    rgba(79, 70, 229, 0.4)
+  );
+  animation: animateBG 60s steps(60) infinite;
+}
+
+.group.number-flow-react {
+  position: relative;
+
+  &::part(right) {
+    font-size: 10px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes animateBG {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite reverse;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
